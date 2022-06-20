@@ -26,4 +26,4 @@ const MaterialIcon: React.FC<Props> = ({
   );
 };
 
-export default styled(MaterialIcon, "mb-5 ");
+export default MaterialIcon;
