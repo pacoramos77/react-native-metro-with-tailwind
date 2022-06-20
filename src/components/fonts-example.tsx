@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { Text, View, StyleSheet, TextProps } from "react-native";
-import AppLoading from "expo-app-loading";
+import { Text, View } from "react-native";
 import * as SplashScreen from "expo-splash-screen";
 import {
   useFonts,
@@ -17,7 +16,7 @@ import {
 } from "@expo-google-fonts/inter";
 import { fontStyle } from "../utils/fonts";
 
-export default () => {
+const FontsExample = () => {
   let [fontsLoaded] = useFonts({
     Inter_100Thin,
     Inter_200ExtraLight,
@@ -101,3 +100,5 @@ export default () => {
     </View>
   );
 };
+
+export default FontsExample;
