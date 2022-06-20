@@ -3,7 +3,7 @@ import { StatusBar } from "expo-status-bar";
 import { Text, View, Image } from "react-native";
 import { TailwindProvider } from "tailwindcss-react-native";
 import {
-  DefaultTheme,
+  MD3LightTheme as DefaultTheme,
   Provider as PaperProvider,
   Avatar,
   Card,
@@ -15,20 +15,8 @@ import { Button, Badge } from "react-native-paper";
 
 import FontsExample from "./src/components/fonts-example";
 import AssetsProvider from "./src/components/assets-provider";
-import { fontStyle } from "./src/utils/fonts";
 import MaterialIcon from "./src/components/material-icon";
-
-const theme = {
-  ...DefaultTheme,
-  roundness: 2,
-  dark: true,
-  colors: {
-    ...DefaultTheme.colors,
-    primary: "#3498db",
-    secondary: "#f1c40f",
-    tertiary: "#a1b2c3",
-  },
-};
+import theme from "./src/themes";
 
 export default function App() {
   const [visible, setVisible] = useState(false);
@@ -39,29 +27,57 @@ export default function App() {
     <AssetsProvider>
       <TailwindProvider>
         <PaperProvider theme={theme}>
-          <View className="flex-1 items-center justify-around bg-slate-900">
+          <View className="flex-1 items-center justify-around">
             <StatusBar style="auto" />
             <Badge>3</Badge>
 
-            <Text
-              className="text-slate-200 mb-10 shadow-inner text-2xl"
-              style={fontStyle("sans", "semibold")}
-            >
+            <Text className="mb-10 shadow-inner text-2xl font-sans-300">
               I'm working with Tailwind CSS in React Native
             </Text>
 
             <MaterialIcon
               name="admin-panel-settings"
               size={24}
-              iconClassName="mb-10"
+              iconClassName="mb-4"
             />
-            <Button
-              icon="camera"
-              mode="contained"
-              onPress={() => console.log("Pressed")}
-            >
-              Press me
-            </Button>
+            <View className="flex flex-row flex-wrap gap-4">
+              <Button
+                icon="camera"
+                mode="contained"
+                onPress={() => console.log("Pressed")}
+              >
+                "contained"
+              </Button>
+              <Button
+                icon="camera"
+                mode="text"
+                onPress={() => console.log("Pressed")}
+              >
+                "text"
+              </Button>
+              <Button
+                icon="camera"
+                mode="outlined"
+                onPress={() => console.log("Pressed")}
+              >
+                "outlined"
+              </Button>
+              <Button
+                icon="camera"
+                mode="elevated"
+                onPress={() => console.log("Pressed")}
+              >
+                "elevated"
+              </Button>
+
+              <Button
+                icon="camera"
+                mode="contained-tonal"
+                onPress={() => console.log("Pressed")}
+              >
+                "contained-tonal"
+              </Button>
+            </View>
             <Card.Title
               title="Card Title"
               subtitle="Card Subtitle"
@@ -77,6 +93,7 @@ export default function App() {
             <Button onPress={onToggleSnackBar}>
               {visible ? "Hide" : "Show"}
             </Button>
+            <FontsExample />
             <Snackbar
               visible={visible}
               onDismiss={onDismissSnackBar}
@@ -89,7 +106,6 @@ export default function App() {
             >
               Hey there! I'm a Snackbar.
             </Snackbar>
-            <FontsExample />
           </View>
         </PaperProvider>
       </TailwindProvider>

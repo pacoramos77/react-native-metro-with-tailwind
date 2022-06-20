@@ -2722,6 +2722,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"array-find-index@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "array-find-index@npm:1.0.2"
+  checksum: aac128bf369e1ac6c06ff0bb330788371c0e256f71279fb92d745e26fb4b9db8920e485b4ec25e841c93146bf71a34dcdbcefa115e7e0f96927a214d237b7081
+  languageName: node
+  linkType: hard
+
 "array-map@npm:~0.0.0":
   version: 0.0.0
   resolution: "array-map@npm:0.0.0"
@@ -4352,8 +4359,8 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
     react-native: ^0.68.2
-    react-native-paper: ^4.12.1
-    react-native-web: ^0.18.1
+    react-native-paper: 5.0.0-rc.2
+    react-native-web: ^0.17.7
     tailwindcss: ^3.1.3
     tailwindcss-react-native: ^1.7.10
     typescript: ~4.3.5
@@ -5234,7 +5241,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hyphenate-style-name@npm:^1.0.2":
+"hyphenate-style-name@npm:^1.0.2, hyphenate-style-name@npm:^1.0.4":
   version: 1.0.4
   resolution: "hyphenate-style-name@npm:1.0.4"
   checksum: 4f5bf4b055089754924babebaa23c17845937bcca6aee95d5d015f8fa1e6814279002bd6a9e541e3fac2cd02519fc76305396727066c57c8e21a7e73e7a12137
@@ -7909,9 +7916,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-paper@npm:^4.12.1":
-  version: 4.12.1
-  resolution: "react-native-paper@npm:4.12.1"
+"react-native-paper@npm:5.0.0-rc.2":
+  version: 5.0.0-rc.2
+  resolution: "react-native-paper@npm:5.0.0-rc.2"
   dependencies:
     "@callstack/react-theme-provider": ^3.0.7
     color: ^3.1.2
@@ -7920,25 +7927,25 @@ __metadata:
     react: "*"
     react-native: "*"
     react-native-vector-icons: "*"
-  checksum: 0f570971f57dd490aba204d6ea0426c71d5b3f731e124a2ed6e29e7be61827a0edb1672192dd985c634fc7d8a65bd15ad9dd6f3ed277ee3ad3b5a5e3da8dc4c8
+  checksum: e42d49dfbc24d2d2a0762b93412bd07869a085737ac31ce96fe5e4a3eac6428222c1b7210d2179b531ce0f2db9ae32dff5ec0aeb7da517bcbbbbdd073263a58e
   languageName: node
   linkType: hard
 
-"react-native-web@npm:^0.18.1":
-  version: 0.18.1
-  resolution: "react-native-web@npm:0.18.1"
+"react-native-web@npm:^0.17.7":
+  version: 0.17.7
+  resolution: "react-native-web@npm:0.17.7"
   dependencies:
+    array-find-index: ^1.0.2
     create-react-class: ^15.7.0
     fbjs: ^3.0.0
+    hyphenate-style-name: ^1.0.4
     inline-style-prefixer: ^6.0.0
     normalize-css-color: ^1.0.2
-    postcss-value-parser: ^4.2.0
     prop-types: ^15.6.0
-    styleq: ^0.1.2
   peerDependencies:
-    react: ">=17.0.2"
-    react-dom: ">=17.0.2"
-  checksum: 4f2e49e73b6804027c0cfe5d614727e63d77c15bc814c7268eebecaa1c322945f9811eb83dbc6511147503c222ebb2a3259285458ccc9b978972281e2e6fa991
+    react: ">=17.0.1"
+    react-dom: ">=17.0.1"
+  checksum: 9a32073d18e12f7d0e77befc0489f07a60e4aea9b7d6da9228387f488956b8f3e04eff02102f70bc427d8ee5047b6f393dc6cb4b3d34501504b9799344054e34
   languageName: node
   linkType: hard
 
@@ -8999,13 +9006,6 @@ __metadata:
   version: 0.4.1
   resolution: "structured-headers@npm:0.4.1"
   checksum: 2f3073b2c8b4f2515367a1647ba0b6764ce6d35b3943605940de41077c2afd2513257f4bf6fbfd67a3455f25a3e844905da6fddde6b6ad7974256495311a25a3
-  languageName: node
-  linkType: hard
-
-"styleq@npm:^0.1.2":
-  version: 0.1.2
-  resolution: "styleq@npm:0.1.2"
-  checksum: 050be47448efcb4abd778629ebe09f2db138e0b59504e8442e35432387d98bd696f0efe6962965c26eff5ee54a30ba4615806761b8f040a47874a62dd237e09f
   languageName: node
   linkType: hard
 
