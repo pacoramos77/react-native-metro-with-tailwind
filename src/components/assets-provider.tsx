@@ -1,5 +1,5 @@
 import React from "react";
-import useAppFontsLoader from "./hooks/app-font-loader";
+import useAppFontsLoader from "../hooks/app-font-loader";
 
 // TODO: https://docs.expo.dev/guides/preloading-and-caching-assets/
 

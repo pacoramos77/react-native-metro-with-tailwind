@@ -3,7 +3,6 @@ import { StatusBar } from "expo-status-bar";
 import { Text, View, Image } from "react-native";
 import { TailwindProvider } from "tailwindcss-react-native";
 import {
-  MD3LightTheme as DefaultTheme,
   Provider as PaperProvider,
   Avatar,
   Card,
@@ -16,7 +15,7 @@ import { Button, Badge } from "react-native-paper";
 import FontsExample from "./src/components/fonts-example";
 import AssetsProvider from "./src/components/assets-provider";
 import MaterialIcon from "./src/components/material-icon";
-import theme from "./src/themes";
+import theme from "./themes";
 
 export default function App() {
   const [visible, setVisible] = useState(false);
@@ -27,7 +26,7 @@ export default function App() {
     <AssetsProvider>
       <TailwindProvider>
         <PaperProvider theme={theme}>
-          <View className="flex-1 items-center justify-around">
+          <View className="flex-1 items-center justify-around bg-background p-2">
             <StatusBar style="auto" />
             <Badge>3</Badge>
 
