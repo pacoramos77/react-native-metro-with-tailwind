@@ -3,10 +3,10 @@ import useAppFontsLoader from "../hooks/app-font-loader";
 
 // TODO: https://docs.expo.dev/guides/preloading-and-caching-assets/
 
-const AssetsProvider: React.FC<React.PropsWithChildren<{}>> = ({
+const AssetsProvider: React.FC<React.PropsWithChildren<unknown>> = ({
   children,
 }) => {
-  let [fontsLoaded] = useAppFontsLoader();
+  const [fontsLoaded] = useAppFontsLoader();
   if (!fontsLoaded) {
     return null;
   }

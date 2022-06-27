@@ -14,7 +14,7 @@ import {
 } from "@expo-google-fonts/inter";
 
 export default function useAppFontsLoader() {
-  let [fontsLoaded] = useFonts({
+  const [fontsLoaded] = useFonts({
     Inter_100Thin,
     Inter_200ExtraLight,
     Inter_300Light,
@@ -28,9 +28,9 @@ export default function useAppFontsLoader() {
 
   useEffect(() => {
     if (fontsLoaded) {
-      SplashScreen.hideAsync();
+      void SplashScreen.hideAsync();
     } else {
-      SplashScreen.preventAutoHideAsync();
+      void SplashScreen.preventAutoHideAsync();
     }
   }, [fontsLoaded]);
 

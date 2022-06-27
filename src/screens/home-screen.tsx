@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import { View, Text } from "react-native";
 import {
@@ -9,7 +8,6 @@ import {
   Snackbar,
   Button,
 } from "react-native-paper";
-import theme from "../../themes";
 import MaterialIcon from "../components/material-icon";
 
 export const HomeScreen = () => {
@@ -22,7 +20,7 @@ export const HomeScreen = () => {
       <Badge>3</Badge>
 
       <Text className="mb-10 shadow-inner text-2xl font-sans-300">
-        I'm working with Tailwind CSS in React Native
+        I&apos;m working with Tailwind CSS in React Native
       </Text>
 
       <MaterialIcon
@@ -36,28 +34,28 @@ export const HomeScreen = () => {
           mode="contained"
           onPress={() => console.log("Pressed")}
         >
-          "contained"
+          <Text>contained</Text>
         </Button>
         <Button
           icon="camera"
           mode="text"
           onPress={() => console.log("Pressed")}
         >
-          "text"
+          <Text>Text</Text>
         </Button>
         <Button
           icon="camera"
           mode="outlined"
           onPress={() => console.log("Pressed")}
         >
-          "outlined"
+          <Text>outlined</Text>
         </Button>
         <Button
           icon="camera"
           mode="elevated"
           onPress={() => console.log("Pressed")}
         >
-          "elevated"
+          <Text>elevated</Text>
         </Button>
 
         <Button
@@ -65,7 +63,7 @@ export const HomeScreen = () => {
           mode="contained-tonal"
           onPress={() => console.log("Pressed")}
         >
-          "contained-tonal"
+          <Text>contained-tonal</Text>
         </Button>
       </View>
       <Card.Title
@@ -73,7 +71,13 @@ export const HomeScreen = () => {
         subtitle="Card Subtitle"
         left={(props) => <Avatar.Icon {...props} icon="folder" />}
         right={(props) => (
-          <IconButton {...props} icon="dots-vertical" onPress={() => {}} />
+          <IconButton
+            {...props}
+            icon="dots-vertical"
+            onPress={() => {
+              /**/
+            }}
+          />
         )}
       />
       <Button onPress={onToggleSnackBar}>{visible ? "Hide" : "Show"}</Button>
@@ -87,7 +91,7 @@ export const HomeScreen = () => {
           },
         }}
       >
-        Hey there! I'm a Snackbar.
+        <Text>Hey there! I&apos;m a Snackbar.</Text>
       </Snackbar>
     </View>
   );
