@@ -17,7 +17,7 @@ type ScreenDefinition = Record<
 >;
 
 const Tab = createBottomTabNavigator();
-const SCREEN_DEFINITIONS: ScreenDefinition = {
+const SCREEN_TABS: ScreenDefinition = {
   Home: {
     title: "Home",
     iconName: "home-filled",
@@ -33,8 +33,9 @@ export const Root = () => {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={({ route }) => ({
+          title: SCREEN_TABS[route.name].title,
           tabBarIcon: ({ focused, size }) => {
-            const { iconName } = SCREEN_DEFINITIONS[route.name];
+            const { iconName } = SCREEN_TABS[route.name];
 
             return (
               <MaterialIcon
@@ -49,7 +50,7 @@ export const Root = () => {
             );
           },
           tabBarActiveTintColor: theme.colors.primary,
-          tabBarInactiveTintColor: "gray",
+          tabBarInactiveTintColor: theme.colors.onBackground,
         })}
       >
         <Tab.Screen name="Home" component={HomeScreen} />

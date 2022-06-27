@@ -19,7 +19,6 @@ export const HomeScreen = () => {
 
   return (
     <View className="flex-1 items-center justify-around bg-background p-2">
-      <StatusBar animated backgroundColor={theme.colors.primary} />
       <Badge>3</Badge>
 
       <Text className="mb-10 shadow-inner text-2xl font-sans-300">

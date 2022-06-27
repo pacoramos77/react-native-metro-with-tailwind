@@ -1,6 +1,6 @@
 import { TailwindProvider } from "tailwindcss-react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { Provider as PaperProvider } from "react-native-paper";
+import { Provider as PaperProvider, ThemeBase } from "react-native-paper";
+import { StatusBar } from "expo-status-bar";
 import "expo-dev-client";
 
 import AssetsProvider from "./src/components/assets-provider";
@@ -11,7 +11,12 @@ export default function App() {
   return (
     <AssetsProvider>
       <TailwindProvider>
-        <PaperProvider theme={theme}>
+        <PaperProvider theme={theme as ThemeBase}>
+          <StatusBar
+            animated
+            style="light"
+            backgroundColor={theme.colors.primary}
+          />
           <Root />
         </PaperProvider>
       </TailwindProvider>

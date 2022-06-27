@@ -4,8 +4,8 @@ import FontsExample from "../components/fonts-example";
 
 export default function SettingsScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text style={{ flex: 1 }}>Settings!</Text>
+    <View className="flex-1 justify-center items-center">
+      <Text className="flex-1 mt-5 text-4xl">Settings!</Text>
 
       <FontsExample />
     </View>
