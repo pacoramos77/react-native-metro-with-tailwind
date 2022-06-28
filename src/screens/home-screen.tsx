@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { View, Text } from "react-native";
+import { useColorScheme } from "tailwindcss-react-native";
 import {
   Badge,
   Card,
@@ -11,18 +12,29 @@ import {
 import MaterialIcon from "../components/material-icon";
 
 export const HomeScreen = () => {
+  const { colorScheme, setColorScheme } = useColorScheme();
   const [visible, setVisible] = useState(false);
   const onToggleSnackBar = () => setVisible(!visible);
   const onDismissSnackBar = () => setVisible(false);
 
   return (
-    <View className="flex-1 items-center justify-around bg-background p-2">
+    <View
+      className={`${colorScheme} flex-1 items-center justify-around bg-background dark:bg-gray-500 p-2`}
+    >
       <Badge>3</Badge>
 
-      <Text className="mb-10 shadow-inner text-2xl font-sans-300">
+      <Text className="mb-10 shadow-inner text-2xl font-sans-400">
         I&apos;m working with Tailwind CSS in React Native
       </Text>
 
+      <Text
+        onPress={() =>
+          setColorScheme(colorScheme === "light" ? "dark" : "light")
+        }
+        className="mb-4 shadow-inner text-xl font-sans-300"
+      >
+        {`The color scheme is ${colorScheme}`}
+      </Text>
       <MaterialIcon
         name="admin-panel-settings"
         size={24}

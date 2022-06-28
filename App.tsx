@@ -6,6 +6,7 @@ import "expo-dev-client";
 import AssetsProvider from "./src/components/assets-provider";
 import theme from "./themes";
 import { Root } from "./src/root";
+import { View } from "react-native";
 
 export default function App() {
   return (
